@@ -22,7 +22,12 @@ module.exports = {
         const incident = await connection('incidents')
             .join('ongs', 'ongs.id', '=', 'incidents.ong_id')
             .where('ong_id', ong_id)
-            .select('incidents.*', 'ongs.name');
+            .select(['incidents.*', 
+            'ongs.name', 
+            'ongs.email', 
+            'ongs.whatsapp', 
+            'ongs.city', 
+            'ongs.uf']);
 
         return response.json(incident);
     },
@@ -34,7 +39,12 @@ module.exports = {
             .join('ongs', 'ongs.id', '=', 'incidents.ong_id')
             .limit(5)
             .offset((page - 1) * 5)
-            .select('*');
+            .select(['incidents.*', 
+            'ongs.name', 
+            'ongs.email', 
+            'ongs.whatsapp', 
+            'ongs.city', 
+            'ongs.uf']);
 
         const [count] = await connection('incidents')
         .join('ongs', 'ongs.id', '=', 'incidents.ong_id')
