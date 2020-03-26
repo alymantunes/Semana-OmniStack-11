@@ -18,27 +18,30 @@ module.exports = {
 
     async index(request, response) {
         const ong_id = request.headers.authorization;
-        const {page = 1} = request.query;
-
-        const [ count ] = await connection('incidents')
-        .where('ong_id', ong_id)
-        .count()
-
+    
         const incident = await connection('incidents')
             .join('ongs', 'ongs.id', '=', 'incidents.ong_id')
             .where('ong_id', ong_id)
-            .limit(5)
-            .offset((page-1)*5)
-            .select('incidents.*','ongs.name');
+            .select('incidents.*', 'ongs.name');
 
-         response.header('X-Total-Count',count['count(*)']);   
         return response.json(incident);
     },
 
     async indexall(request, response) {
+        const { page = 1 } = request.query;
+
         const incident = await connection('incidents')
-        .join('ongs', 'ongs.id', '=', 'incidents.ong_id')
+            .join('ongs', 'ongs.id', '=', 'incidents.ong_id')
+            .limit(5)
+            .offset((page - 1) * 5)
             .select('*');
+
+        const [count] = await connection('incidents')
+        .join('ongs', 'ongs.id', '=', 'incidents.ong_id')
+            .count();
+
+        response.header('X-Total-Count', count['count(*)']);
+
         return response.json(incident);
     },
 
