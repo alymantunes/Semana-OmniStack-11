@@ -1,17 +1,11 @@
-import React, { useState} from 'react';
+import React from 'react';
+import './global.css';
+
+import Routes from './routes';
 
 function App() {
-  const [counter,setCounter] = useState(0);
-
-  function increment() {
-    setCounter(counter + 1);
-  }
-
   return (
-    <div>
-      <h1>counter: {counter}</h1>
-      <button onClick={increment}>increment</button>
-    </div>
+   <Routes />
   );
 }
 
