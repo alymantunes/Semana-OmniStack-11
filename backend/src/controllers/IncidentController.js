@@ -29,7 +29,7 @@ module.exports = {
             .where('ong_id', ong_id)
             .limit(5)
             .offset((page-1)*5)
-            .select('*');
+            .select('incidents.*','ongs.name');
 
          response.header('X-Total-Count',count['count(*)']);   
         return response.json(incident);
