@@ -41,7 +41,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 <br>
 
 
-## Getting started
+## Instruções das Aulas
 
 [Back-end](Be%20The%20Hero%20Omnistack%2011%200/Back%20end.md)
 
@@ -50,6 +50,12 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 [Mobile](Be%20The%20Hero%20Omnistack%2011%200/Mobile.md)
 
 [Funcionalidades avançadas](Be%20The%20Hero%20Omnistack%2011%200/Funcionalidades%20avan%20adas.md)
+
+
+
+&copy; JeanFSorio
+[Anotações Notion](https://www.notion.so/Be-The-Hero-Omnistack-11-0-688ec8a27948481f901db20fb90de4e3)
+
 
 <br>
 
