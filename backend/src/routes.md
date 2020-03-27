@@ -18,4 +18,7 @@
  * Request Body: Corpo da requisição, utilizado para criar ou alterar recursos
     *      request.body
  
+
+
+ * Celebrate - usado para validações nas rotas, ver documentaçao do Joi para mais informações
  
