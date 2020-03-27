@@ -16,27 +16,6 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - [React Native](https://facebook.github.io/react-native/)
 - [Expo](https://expo.io/)
 
-
-
-
-
-<br>
-
- **Aula 01**
-<br> - Conhecendo a OmniStack (23/03)
-
-**Aula 02** 
-<br> - Criando a base da aplicação (24/03)
- 
- **Aula 03**
-<br> - Construindo a interface web (25/03)
-
-**Aula 04** 
-<br> - Desenvolvendo o app mobile (26/03)
-
-**Aula 05** 
-<br> - Funcionalidades avançadas (27/03)
-
 ---
 <br>
 
